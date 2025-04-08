@@ -1,0 +1,52 @@
+/* styles.css */
+
+/* Styl dla głównego kontenera StackPane */
+.main-container {
+    -fx-background-color: #1E1E1E; /* Kolor tła */
+}
+
+/* Styl dla TabPane */
+.tab-pane {
+    -fx-background-color: #1E1E1E; /* Kolor tła zakładek */
+}
+
+/* Styl dla poszczególnych zakładek (Tab) */
+.tab {
+    -fx-background-color: #1E1E1E; /* Kolor tła zakładki */
+}
+
+
+.tab-label {
+    -fx-text-fill: white;
+}
+
+/* Kolor tekstu dla konkretnych zakładek */
+.tab-pane .tab[text="Home Page"] .tab-label,
+.tab-pane .tab[text="Przegląd rynków"] .tab-label,
+.tab-pane .tab[text="Ulubione"] .tab-label {
+}
+
+/* Czarne tło dla kolumn tabeli */
+.table-view .column-header, .table-row-cell {
+    -fx-background-color: #1E1E1E; /* Czarne tło */
+}
+
+
+/* Białe tło dla tytułów kolumn */
+.table-view .column-header .label {
+    -fx-text-fill: white;
+}
+
+/* Styl dla komunikatu braku zawartości w tabeli */
+.table-view .placeholder .label {
+    -fx-text-fill: white; /* Kolor tekstu */
+}
+
+/* Tło dla komunikatu braku zawartości w tabeli */
+.table-view .placeholder {
+    -fx-background-color: #1E1E1E; /* Kolor tła */
+}
+
+
+
+

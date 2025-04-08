@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- newwindow.fxml -->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0"
+	prefWidth="1500.0" style="-fx-background-color: #1E1E1E;"
+	xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="pl.edu.pw.mini.zpoif.project.binance.controllers.NewWindowController">
+	<children>
+		<Label layoutX="1149.0" layoutY="177.0" prefHeight="18.0"
+			prefWidth="119.0" style="-fx-text-fill: white;"
+			text="Wybierz przedział" />
+		<Button layoutX="1187.0" layoutY="136.0"
+			onAction="#closeWindow" text="Close" />
+		<Pane fx:id="plotPane" layoutX="89.0" layoutY="96.0"
+			prefHeight="558.0" prefWidth="982.0" />
+		<ChoiceBox fx:id="intervalChoice"
+			accessibleText="1m,15m,30m,1h,1d" layoutX="1134.0" layoutY="196.0"
+			prefWidth="150.0" />
+		<DatePicker fx:id="datePicker" layoutX="1129.0"
+			layoutY="277.0" />
+		<Label fx:id="chooseDate" layoutX="1141.0" layoutY="259.0"
+			style="-fx-text-fill: white;" text="Wybierz datę początkową" />
+		<CheckBox fx:id="liveCheck" layoutX="1187.0" layoutY="579.0"
+			mnemonicParsing="false" style="-fx-text-fill: white;" text="Live" />
+		<Slider fx:id="hourSlider" layoutX="1118.0" layoutY="356.0"
+			majorTickUnit="1" max="23" min="0" minorTickCount="0" prefWidth="300"
+			showTickLabels="true" showTickMarks="true" value="0" />
+		<Slider fx:id="minuteSlider" layoutX="1118.0" layoutY="424.0"
+			majorTickUnit="5" max="59" min="0" minorTickCount="4" prefWidth="300"
+			showTickLabels="true" showTickMarks="true" value="0" />
+		<Label layoutX="1153.0" layoutY="317.0" prefHeight="18.0"
+			prefWidth="127.0" style="-fx-text-fill: white;"
+			text="Wybierz godzinę" />
+		<Label layoutX="1153.0" layoutY="394.0" prefHeight="18.0"
+			prefWidth="127.0" style="-fx-text-fill: white;" text="Wybierz minutę" />
+		<Button fx:id="generatePlot" layoutX="1157.0" layoutY="476.0"
+			mnemonicParsing="false" prefHeight="38.0" prefWidth="119.0"
+			text="Generuj wykres" />
+	</children>
+</AnchorPane>

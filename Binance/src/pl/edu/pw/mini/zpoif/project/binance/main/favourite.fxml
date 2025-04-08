@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<!-- FavoritesTab.fxml -->
+
+<?scenebuilder-stylesheet ./styles.css?>
+
+<AnchorPane fx:id="favouriteTab" prefHeight="750.0"
+	prefWidth="1500.0" xmlns="http://javafx.com/javafx/21"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="pl.edu.pw.mini.zpoif.project.binance.controllers.FavouriteController">
+
+
+	<!-- Content of the Favorites Tab -->
+	<children>
+		<TableView fx:id="favourite" layoutX="150.0" layoutY="75.0"
+			prefHeight="600.0" prefWidth="1200.0">
+			<columns>
+				<TableColumn fx:id="favouriteNameColumn"
+					prefWidth="56.799983978271484" text="Nazwa" />
+				<TableColumn fx:id="favouriteLastPriceColumn"
+					prefWidth="68.80001831054688" text="Cena" />
+				<TableColumn fx:id="favouritePriceChangePercentColumn"
+					prefWidth="130.0" text="Zmiana ceny w 24 h" />
+				<TableColumn fx:id="favouriteQuoteVolumeColumn"
+					prefWidth="82.4000244140625" text="Wolumen" />
+				<TableColumn fx:id="deleteFavouriteColumn"
+					prefWidth="123.99993896484375" text="Usuń z ulubionych" />
+			</columns>
+			<columnResizePolicy>
+				<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+			</columnResizePolicy>
+		</TableView>
+	</children>
+</AnchorPane>

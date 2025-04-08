@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<!-- MarketsReviewTab.fxml -->
+
+<?scenebuilder-stylesheet ./styles.css?>
+
+<AnchorPane fx:id="marketsreviewTab" prefHeight="750.0"
+	prefWidth="1500.0" xmlns="http://javafx.com/javafx/21"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="pl.edu.pw.mini.zpoif.project.binance.controllers.MarketsReviewController">
+
+
+	<!-- Content of the MarketsReviewTab -->
+	<children>
+		<TableView fx:id="overview" layoutX="150.0" layoutY="75.0"
+			prefHeight="600.0" prefWidth="1200.0">
+			<columns>
+				<TableColumn fx:id="nameColumn4"
+					prefWidth="56.799983978271484" text="Nazwa" />
+				<TableColumn fx:id="lastPriceColumn4"
+					prefWidth="68.80001831054688" text="Cena" />
+				<TableColumn fx:id="priceChangePercentColumn4"
+					prefWidth="130.0" text="Zmiana ceny w 24 h" />
+				<TableColumn fx:id="quoteVolumeColumn4"
+					prefWidth="130.0" text="Wolumen" />
+				<TableColumn fx:id="favouriteColumn4"
+					prefWidth="129.60000000000002" text="Dodaj do ulubionych" />
+				<TableColumn fx:id="plotColumn4" prefWidth="75.0"
+					text="Wykres" />
+			</columns>
+			<columnResizePolicy>
+				<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+			</columnResizePolicy>
+		</TableView>
+	</children>
+</AnchorPane>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<!-- HomePageTab.fxml -->
+
+<?scenebuilder-stylesheet ./styles.css?>
+
+<AnchorPane fx:id="homepageTab" prefHeight="750.0"
+	prefWidth="1500.0" xmlns="http://javafx.com/javafx/21"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="pl.edu.pw.mini.zpoif.project.binance.controllers.HomePageController">
+
+
+	<!-- Content of the Home Page Tab -->
+	<children>
+		<TableView fx:id="biggestGainers" layoutX="60.0"
+			layoutY="175.0" prefHeight="300.0" prefWidth="420.0">
+			<columns>
+				<TableColumn fx:id="symbolColumn1" prefWidth="50.0"
+					text="Nazwa" />
+				<TableColumn fx:id="lastPriceColumn1" prefWidth="100.0"
+					text="Cena" />
+				<TableColumn fx:id="priceChangePercentColumn1"
+					prefWidth="130.0" text="Zmiana ceny w 24 h" />
+			</columns>
+			<columnResizePolicy>
+				<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+			</columnResizePolicy>
+		</TableView>
+		<TableView fx:id="biggestLosers" layoutX="540.0"
+			layoutY="175.0" prefHeight="300.0" prefWidth="420.0">
+			<columns>
+				<TableColumn fx:id="symbolColumn2" prefWidth="50.0"
+					text="Nazwa" />
+				<TableColumn fx:id="lastPriceColumn2" prefWidth="100.0"
+					text="Cena" />
+				<TableColumn fx:id="priceChangePercentColumn2"
+					prefWidth="130.0" text="Zmiana ceny w 24 h" />
+			</columns>
+			<columnResizePolicy>
+				<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+			</columnResizePolicy>
+		</TableView>
+		<Label layoutX="219.0" layoutY="125.0" text="Największe wzrosty"
+			textFill="#ffffff" />
+		<Label layoutX="701.0" layoutY="125.0" text="Największe spadki"
+			textFill="#ffffff" />
+		<TableView fx:id="biggestVolumes" layoutX="1020.0"
+			layoutY="175.0" prefHeight="300.0" prefWidth="420.0">
+			<columns>
+				<TableColumn fx:id="symbolColumn3" prefWidth="50.0"
+					text="Nazwa" />
+				<TableColumn fx:id="lastPriceColumn3" prefWidth="100.0"
+					text="Cena" />
+				<TableColumn fx:id="volumeColumn3" prefWidth="130.0"
+					text="Wolumen" />
+			</columns>
+			<columnResizePolicy>
+				<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+			</columnResizePolicy>
+		</TableView>
+		<Label layoutX="1175.0" layoutY="125.0"
+			text="Największy wolumen" textFill="#ffffff" />
+		<ChoiceBox fx:id="marketTypeChoice"
+			accessibleText="USDT, BNB, BTC, ETH" layoutX="628.0" layoutY="600.0"
+			prefHeight="43.0" prefWidth="243.0" />
+		<Label layoutX="694.0" layoutY="550.0"
+			text="Wybierz rodzaj rynku" textFill="#ffffff" />
+	</children>
+</AnchorPane>
